@@ -83,7 +83,12 @@ public class TestLambda {
     }
 
     @Test
-    void test07_filterAnimalsWithPredicateAndConsumer() {
+    void test07_filterAnimalsWithCheckerLambda() {
+        AnimalFilter.printAnimalsWithPredicate(animals, animal -> animal.getAge() < 2);
+    }
+
+    @Test
+    void test08_filterAnimalsWithPredicateAndConsumer() {
         AnimalFilter.processAnimals(
             animals,
             animal -> animal.getAge() < 2,
@@ -92,7 +97,7 @@ public class TestLambda {
     }
 
     @Test
-    void test08_filterAnimalsWithPredicateMapperAndConsumer() {
+    void test09_filterAnimalsWithPredicateMapperAndConsumer() {
         AnimalFilter.processAnimals(
             animals,
             animal -> animal.getAge() < 2,
@@ -102,7 +107,7 @@ public class TestLambda {
     }
 
     @Test
-    void test09_filterElementsWithPredicateMapperAndConsumer() {
+    void test10_filterElementsWithPredicateMapperAndConsumer() {
         AnimalFilter.processElements(
             animals,
             animal -> animal.getAge() < 2,
@@ -112,7 +117,7 @@ public class TestLambda {
     }
 
     @Test
-    void test10_filterElementsWithStreams() {
+    void test11_filterElementsWithStreams() {
         AnimalFilter.processElementsWithStream(
             animals,
             animal -> animal.getAge() < 2,
@@ -122,7 +127,7 @@ public class TestLambda {
     }
 
     @Test
-    void test10_filterElementsWithStreamsAndMethodReferences() {
+    void test12_filterElementsWithStreamsAndMethodReferences() {
         AnimalFilter.processElementsWithStream(
             animals,
             animal -> animal.getAge() < 2,

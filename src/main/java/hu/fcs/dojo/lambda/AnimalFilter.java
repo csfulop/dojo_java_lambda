@@ -23,7 +23,7 @@ public class AnimalFilter {
         }
     }
 
-    public static void processAnimals(List<Animal> animals, Predicate<Animal> predicate) {
+    public static void printAnimalsWithPredicate(List<Animal> animals, Predicate<Animal> predicate) {
         for (Animal animal : animals) {
             if (predicate.test(animal)) {
                 System.out.println(animal.getName());
